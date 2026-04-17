@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sathiyam Typing Institute</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: #253136;
+  overflow-x: hidden;
+  
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #00f2fe;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(270deg, #141e30, #243b55, #0f2027);
+  background-size: 600% 600%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0%}
+  50% {background-position: 100%}
+  100% {background-position: 0%}
+}
+
+.hero h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+  margin-top: 15px;
+  opacity: 0.8;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 15px #00f2fe;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #00f2fe;
+}
+
+/* SECTION */
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* GLASS CARD */
+.card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 15px;
+  padding: 25px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: 0.4s;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s forwards;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.5);
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#courses">Courses</a>
+  <a href="#contact">Contact</a>
+  <a href="#location">Location</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div>
+    <h1>Sathiyam Typing Institute</h1>
+    <p>Build Speed • Accuracy • Career Growth</p>
+    <a href="register.html" class="btn">Join Now</a>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+  <h2>Our Courses</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Courses</h3>
+      <ul>
+        <li>Junior Tamil</li>
+        <li>Junior English</li>
+        <li>Senior Tamil</li>
+        <li>Senior English</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Timings</h3>
+      <p>Morning: 6:00 AM – 9:00 AM </p>
+      <p>Evening: 5:00 PM – 8:00 PM </p>
+    </div>
+
+    <div class="card">
+      <h3>Fees</h3>
+      <p>Tamil: ₹600</p>
+      <p>English: ₹500</p>    
+    </div>
+
+    <div class="card">
+      <h3>Certification</h3>
+      <p>Training for Government Typing Exams (5–6 months).</p>
+    </div>
+  </div>
+</section>
+<!-- STATS -->
+<section>
+  <div class="grid">
+    <div class="card">
+      <h2>100+</h2>
+      <p>Students Trained Every Year</p>
+    </div>
+    <div class="card">
+      <h2>5+ Years</h2>
+      <p>Experience</p>
+    </div>
+    <div class="card">
+      <h2>90%</h2>
+      <p>Success Rate</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="grid">
+    <div class="card">
+      <p>📞 Phone: 7639771794</p>
+      <p>📧 Email: priyamohana0552@gmail.com</p>
+    </div>
+  </div>
+</section>
+<section id="location">
+  <div class="card">
+    <h2>Our Locations</h2>
+
+    <p><b>Branch 1:</b> MALLI</p>
+    <iframe
+      src="https://www.google.com/maps?q=9.493049,77.69623&output=embed"
+      width="100%"
+      height="250"
+      style="border:0; margin-top:10px; border-radius:10px;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+
+    <br><br>
+
+    <p><b>Branch 2:</b> SATCHIYAPURAM</p>
+    <iframe
+      src="https://www.google.com/maps?q=9.494726,77.690973&output=embed"
+      width="100%"
+      height="250"
+      style="border:0; margin-top:10px; border-radius:10px;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2022 Typing Institute</p>
+</footer>
+
+<a href="https://wa.me/7639771794" class="whatsapp">💬</a>
+<script>
+function sendToWhatsApp(e) {
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let course = document.getElementById("course").value;
+
+  let message = `New Student Registration:%0AName: ${name}%0APhone: ${phone}%0ACourse: ${course}`;
+
+  window.open(`https://wa.me/919876543210?text=${message}`, "_blank");
+}
+</script>
+</body>
+</html>
